@@ -26,7 +26,6 @@
 					
 					    <a class="dropdown-item" href="#">Breadth-First Search (BFS)</a>
 						<a class="dropdown-item" href="#">Depth-First Search (DFS)</a>
-						
 					  
 					</div>
 				  </li>
@@ -92,8 +91,120 @@
  			<div class="key"></div>  
  			<div>Unvisited</div>
 		 </div>
-	</div> 
- 	
+		 
+ 	</div>
+<!-- MAIN AREA TO INCLUDE ELEMENT-->
+ 	<div class="d-flex flex-column align-items-center" id="bigTableContainer">
+		<div id="tableContainer"></div>
+		<!-- <div id="update">Click or drag cells to build walls. <br/>Press the 'Start' button when you finish and have selected an algorithm.</div> -->
+ 	</div>
+
+	 <!-- SIMPLE MODAL -->
+ 	<div class="d-flex flex-row m-4 justify-content-center">
+	
+	
+
+		
+		<!-- Button Trigger for Info Modal -->
+		<button type="button" class="btn btn-outline-success btn-circle btn-lg" data-toggle="modal" data-target="#infoModal" id="infoModalBtn">Info</button>
+
+		<!-- Button Trigger for Info Modal -->
+		<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		      	<div class="container-fluid">
+		        	<h5 class="modal-title">Algorithms</h5>
+		        </div>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		      	<div class="container-fluid">
+		      	This section gives brief summaries for each of the maze solving algorithms listed under the Algorithms tab.
+		      	<br>
+		      	<br>
+		        <div id="accordion">
+				  <div class="card">
+				    <div class="card-header" id="headingOne">
+				      <h5 class="mb-0">
+				        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				          Depth-First Search (DFS)
+				        </button>
+				      </h5>
+				    </div>
+
+				    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+				      <div class="card-body">
+				        <p>
+				        	<b>How It Works: </b> DFS starts at the root node and explores as far as possible along each branch before backtracking.
+				        </p>
+				        <p>
+				        	<b>Analysis: </b> This is a poor algorithm for pathfinding. It is <u>unweighted</u> and does <u>not</u> guarantee the shortest path.
+				        </p>
+				        <p class="fun-fact">
+				        	<i><b>Fun Fact: </b> This algorithm was first investigated in the 19th century by French Mathematician Charles Trémaux.</i>
+				        </p>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="card">
+				    <div class="card-header" id="headingTwo">
+				      <h5 class="mb-0">
+				        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				          Breadth-First Search (BFS)
+				        </button>
+				      </h5>
+				    </div>
+				    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				      <div class="card-body">
+				        <p>
+				        	<b>How It Works: </b> BFS starts at the root node and explores all of the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level.
+				        </p>
+				        <p>
+				        	<b>Analysis: </b> This is an OK algorithm for pathfinding. It is <u>unweighted</u> but <u>guarantees</u> the shortest path.
+				        </p>
+				        <p class="fun-fact">
+				        	<i><b>Fun Fact: </b> This algorithm was first invented in 1945 by Konrad Zuse and was submitted in his rejected PhD thesis, but was not published until 1972.</i>
+				        </p>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="card">
+				    <div class="card-header" id="headingThree">
+				      <h5 class="mb-0">
+				        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+				          Dijkstra
+				        </button>
+				      </h5>
+				    </div>
+				    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+				      <div class="card-body">
+				        <p>
+				        	<b>How It Works: </b> In Dijkstra's algorithm, all of the nodes in the graph (except the starting node) are initialized with a distance equal to 'infinity.' These distances represents the cost to get from the starting node to the current node, with the starting node having a distance of zero. At the beginning of each iteration, the node with the smallest distance that hasn't been explored yet is visited. These nodes are stored in a min-heap data structure. When a node is visited, all of the neighbors' distances are updated, and if any of the neighbor's distances are lessened, then the algorithm pushes the node onto the min-heap. This continues until the end node has been reached.
+				        </p>
+				        <p>
+				        	<b>Analysis: </b> This is an OK algorithm for pathfinding. This algorithm performs very well in trees with unequal distances between nodes. But since this program only explores horizontally/vertically (with each move costing one), it behaves exactly the same as BFS. It is <u>unweighted</u> but <u>guarantees</u> the shortest path.
+				        </p>
+				        <p class="fun-fact">
+				        	<i><b>Fun Fact: </b> Edsger Dijkstra invented this algorithm in twenty minutes.</i>
+				        </p>
+				      </div>
+				    </div>
+				  </div>
+
+			
+				</div>
+		      </div>
+		  	  </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
 
 
 
